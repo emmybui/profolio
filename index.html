@@ -279,9 +279,11 @@ nav {
   );
   transition: left .6s ease;
 }
-
-.btn-download:hover::before {
-  left: 120%;
+.btn-download {
+  position: relative;
+  min-width: 220px;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .btn-download .btn-text,
@@ -294,13 +296,17 @@ nav {
 
 .btn-download .btn-loading {
   position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   opacity: 0;
   transform: translateY(8px);
+  pointer-events: none;
 }
 
 .btn-download.loading {
   pointer-events: none;
-  opacity: .92;
 }
 
 .btn-download.loading .btn-text {
@@ -879,7 +885,7 @@ footer span { color: var(--peach); }
     </p>
 
     <div class="hero-cta">
-      <a href="./Bui_Thi_Quynh_Nhu_Resume.pdf" download class="btn btn-primarybtn-download" id="downloadBtn">
+      <!-- <a href="./Bui_Thi_Quynh_Nhu_Resume.pdf" download class="btn btn-primarybtn-download" id="downloadBtn">
         <span class="btn-text">
             <i class="fa-solid fa-download"></i> Download CV
           </span>
@@ -887,6 +893,18 @@ footer span { color: var(--peach); }
           <span class="btn-loading">
             <i class="fa-solid fa-spinner fa-spin"></i> Downloading...
           </span>
+      </a> -->
+      <a href="/Bui_Thi_Quynh_Nhu_Resume.pdf" class="btn btn-primary btn-download" id="downloadBtn">
+        <span class="btn-text">
+          <i class="fa-solid fa-download"></i> Download CV
+        </span>
+        <span class="btn-loading">
+          <i class="fa-solid fa-spinner fa-spin"></i> Downloading...
+        </span>
+      </a>
+      
+      <a href="#contact" class="btn btn-outline">
+        <i class="fa-solid fa-paper-plane"></i> Get in Touch
       </a>
     </div>
   </div>
@@ -1461,6 +1479,7 @@ window.addEventListener('scroll', () => {
 });
   
 const downloadBtn = document.getElementById('downloadBtn');
+
 if (downloadBtn) {
   downloadBtn.addEventListener('click', () => {
     downloadBtn.classList.add('loading');
