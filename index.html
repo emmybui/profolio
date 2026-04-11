@@ -49,42 +49,8 @@ body {
   background: var(--cream);
   color: var(--ink);
   overflow-x: hidden;
-  cursor: none;
 }
 
-/* ─── Custom Cursor ─────────────────────────────────── */
-.cursor {
-  width: 32px;
-  height: 32px;
-  background: url('https://cdn-icons-png.flaticon.com/512/616/616408.png') no-repeat center/contain;
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-}
-.cursor-ring {
-  width: 36px; height: 36px;
-  border: 1.5px solid var(--rose);
-  border-radius: 50%;
-  position: fixed; top: 0; left: 0;
-  pointer-events: none; z-index: 9998;
-  transform: translate(-50%,-50%);
-  transition: all .18s ease;
-  opacity: .6;
-}
-body:hover .cursor { opacity: 1; }
-  @media (hover: none) and (pointer: coarse) {
-  .cursor,
-  .cursor-ring {
-    display: none !important;
-  }
-
-  body {
-    cursor: auto !important;
-  }
-}
 
 /* ─── Scrollbar ─────────────────────────────────────── */
 ::-webkit-scrollbar { width: 6px; }
@@ -150,7 +116,7 @@ nav {
 }
 .nav-links a:hover { color: var(--rose); }
 .nav-links a:hover::after { width: 100%; }
-.nav-toggle { display: none; background: none; border: none; cursor: none; }
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; }
 .nav-toggle span {
   display: block; width: 22px; height: 2px;
   background: var(--espresso); margin: 5px 0;
@@ -251,7 +217,6 @@ nav {
   letter-spacing: .1em;
   text-transform: uppercase;
   text-decoration: none;
-  cursor: none;
   transition: all .3s;
   border: 2px solid transparent;
 }
@@ -457,7 +422,6 @@ section { padding: 6rem 5%; position: relative; z-index: 1; }
   overflow: hidden;
   transform-style: preserve-3d;
   transition: transform .5s cubic-bezier(.23,1,.32,1), box-shadow .5s ease;
-  cursor: none;
 }
 .project-card::before {
   content: '';
@@ -487,7 +451,6 @@ section { padding: 6rem 5%; position: relative; z-index: 1; }
   text-decoration: none;
   font-size: .85rem;
   transition: all .3s;
-  cursor: none;
 }
 .card-link:hover {
   background: var(--rose);
@@ -656,7 +619,6 @@ section { padding: 6rem 5%; position: relative; z-index: 1; }
   position: relative;
   transform-style: preserve-3d;
   transition: transform .5s cubic-bezier(.23,1,.32,1);
-  cursor: none;
 }
 .gallery-item:hover { transform: scale(1.03) rotateY(-3deg); }
 .gallery-item.tall  { grid-row: span 2; }
@@ -734,7 +696,7 @@ section { padding: 6rem 5%; position: relative; z-index: 1; }
   font-size: 1.3rem;
   text-decoration: none;
   transition: all .4s cubic-bezier(.34,1.56,.64,1);
-  cursor: none;
+
 }
 .contact-btn.github   { background: rgba(253,246,238,.1); color: var(--cream); border: 1.5px solid rgba(253,246,238,.2); }
 .contact-btn.linkedin { background: rgba(91,159,201,.15); color: #7ec8e3; border: 1.5px solid rgba(91,159,201,.25); }
@@ -791,9 +753,6 @@ footer span { color: var(--peach); }
 </head>
 <body>
 
-<!-- Custom Cursor -->
-<div class="cursor" id="cursor"></div>
-<div class="cursor-ring" id="cursorRing"></div>
 
 <!-- Nav -->
 <nav id="nav">
@@ -1319,35 +1278,6 @@ footer span { color: var(--peach); }
 
 <!-- ─── JAVASCRIPT ──────────────────────────────────── -->
 <script>
-/* Custom Cursor */
-const cursor = document.getElementById('cursor');
-const ring   = document.getElementById('cursorRing');
-let mx = 0, my = 0, rx = 0, ry = 0;
-document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
-function animateCursor() {
-  rx += (mx - rx) * .18;
-  ry += (my - ry) * .18;
-  cursor.style.left = mx + 'px';
-  cursor.style.top  = my + 'px';
-  ring.style.left   = rx + 'px';
-  ring.style.top    = ry + 'px';
-  requestAnimationFrame(animateCursor);
-}
-animateCursor();
-document.querySelectorAll('a, button, .badge, .card-link').forEach(el => {
-  el.addEventListener('mouseenter', () => {
-    cursor.style.width = '20px';
-    cursor.style.height = '20px';
-    ring.style.width = '50px';
-    ring.style.height = '50px';
-  });
-  el.addEventListener('mouseleave', () => {
-    cursor.style.width = '12px';
-    cursor.style.height = '12px';
-    ring.style.width = '36px';
-    ring.style.height = '36px';
-  });
-});
 
 /* Mobile Nav */
 const toggle = document.getElementById('navToggle');
