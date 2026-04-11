@@ -106,6 +106,9 @@ nav {
   font-size: 1.3rem;
   color: var(--espresso);
   font-style: italic;
+  text-decoration: none;
+  transition: transform .25s ease, color .25s ease, opacity .25s ease;
+  display: inline-block;
 }
 .nav-links {
   display: flex; gap: 2rem; list-style: none;
@@ -128,7 +131,7 @@ nav {
   background: var(--rose);
   transition: width .3s;
 }
-.nav-links a:hover { color: var(--rose); }
+.nav-links a:hover { color: var(--rose); transform: translateY(-2px); }
 .nav-links a:hover::after { width: 100%; }
 .nav-toggle { display: none; background: none; border: none; cursor: none; }
 .nav-toggle span {
@@ -254,6 +257,62 @@ nav {
   background: rgba(232,133,122,.08);
   transform: translateY(-3px);
 }
+  .btn-download {
+  position: relative;
+  overflow: hidden;
+  min-width: 190px;
+  justify-content: center;
+}
+
+.btn-download::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 120%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,.28),
+    transparent
+  );
+  transition: left .6s ease;
+}
+
+.btn-download:hover::before {
+  left: 120%;
+}
+
+.btn-download .btn-text,
+.btn-download .btn-loading {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  transition: opacity .25s ease, transform .25s ease;
+}
+
+.btn-download .btn-loading {
+  position: absolute;
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+.btn-download.loading {
+  pointer-events: none;
+  opacity: .92;
+}
+
+.btn-download.loading .btn-text {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
+.btn-download.loading .btn-loading {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 /* Floating decorations */
 .hero-floats { position: absolute; right: 5%; top: 50%; transform: translateY(-50%); z-index: 2; }
@@ -777,7 +836,7 @@ footer span { color: var(--peach); }
 
 <!-- Nav -->
 <nav id="nav">
-  <div class="nav-logo">Quynh Nhu ✦</div>
+  <a href="#hero" class="nav-logo">Quynh Nhu ✦</a>
   <ul class="nav-links" id="navLinks">
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
@@ -820,11 +879,14 @@ footer span { color: var(--peach); }
     </p>
 
     <div class="hero-cta">
-      <a href="./Bui_Thi_Quynh_Nhu_Resume.pdf" download class="btn btn-primary">
-        <i class="fa-solid fa-download"></i> Download CV
-      </a>
-      <a href="#contact" class="btn btn-outline">
-        <i class="fa-solid fa-paper-plane"></i> Get in Touch
+      <a href="./Bui_Thi_Quynh_Nhu_Resume.pdf" download class="btn btn-primarybtn-download" id="downloadBtn">
+        <span class="btn-text">
+            <i class="fa-solid fa-download"></i> Download CV
+          </span>
+        
+          <span class="btn-loading">
+            <i class="fa-solid fa-spinner fa-spin"></i> Downloading...
+          </span>
       </a>
     </div>
   </div>
@@ -1397,6 +1459,17 @@ window.addEventListener('scroll', () => {
   document.getElementById('nav').style.boxShadow = 
     window.scrollY > 30 ? '0 4px 24px rgba(74,55,40,.1)' : 'none';
 });
+  
+const downloadBtn = document.getElementById('downloadBtn');
+if (downloadBtn) {
+  downloadBtn.addEventListener('click', () => {
+    downloadBtn.classList.add('loading');
+
+    setTimeout(() => {
+      downloadBtn.classList.remove('loading');
+    }, 2500);
+  });
+}
 </script>
 </body>
 </html>
