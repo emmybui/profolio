@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Quynh Nhu · Portfolio</title>
+<title>Bui Thi Quynh Nhu · Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -41,16 +41,13 @@
 
 /* ─── Reset & Base ──────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
 html { scroll-behavior: smooth; font-size: 16px; }
-
 body {
   font-family: var(--font-body);
   background: var(--cream);
   color: var(--ink);
   overflow-x: hidden;
 }
-
 
 /* ─── Scrollbar ─────────────────────────────────────── */
 ::-webkit-scrollbar { width: 6px; }
@@ -84,18 +81,11 @@ nav {
   color: var(--espresso);
   font-style: italic;
   text-decoration: none;
-  transition: transform .25s ease, color .25s ease, opacity .25s ease;
+  transition: transform .25s ease, color .25s ease;
   display: inline-block;
 }
-
-.nav-logo:hover {
-  color: var(--rose);
-  transform: translateY(-2px);
-}
-
-.nav-links {
-  display: flex; gap: 2rem; list-style: none;
-}
+.nav-logo:hover { color: var(--rose); transform: translateY(-2px); }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
 .nav-links a {
   font-family: var(--font-mono);
   font-size: .72rem;
@@ -147,10 +137,7 @@ nav {
   to   { transform: translate(20px, -30px) scale(1.06); }
 }
 
-.hero-content {
-  position: relative; z-index: 2;
-  max-width: 700px;
-}
+.hero-content { position: relative; z-index: 2; max-width: 700px; }
 .hero-tag {
   display: inline-block;
   font-family: var(--font-mono);
@@ -174,10 +161,7 @@ nav {
 .hero-name span { color: var(--rose); font-style: italic; }
 
 /* Role flipper */
-.role-wrapper {
-  height: 2.8rem; overflow: hidden;
-  margin-bottom: 2rem;
-}
+.role-wrapper { height: 2.8rem; overflow: hidden; margin-bottom: 2rem; }
 .role-track {
   display: flex; flex-direction: column;
   transition: transform .6s cubic-bezier(.77,0,.18,1);
@@ -191,56 +175,33 @@ nav {
   letter-spacing: .06em;
   white-space: nowrap;
 }
-.role-item::before {
-  content: '~/';
-  color: var(--peach);
-  margin-right: .4rem;
-}
+.role-item::before { content: '~/'; color: var(--peach); margin-right: .4rem; }
 
 .hero-bio {
-  font-size: 1rem;
-  line-height: 1.75;
-  color: var(--mid);
-  max-width: 520px;
-  margin-bottom: 2.4rem;
+  font-size: 1rem; line-height: 1.75;
+  color: var(--mid); max-width: 520px; margin-bottom: 2.4rem;
 }
-
-.hero-cta {
-  display: flex; gap: 1rem; flex-wrap: wrap;
-}
+.hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
 .btn {
   display: inline-flex; align-items: center; gap: .5rem;
-  padding: .8rem 1.8rem;
-  border-radius: 999px;
-  font-family: var(--font-mono);
-  font-size: .78rem;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: all .3s;
+  padding: .8rem 1.8rem; border-radius: 999px;
+  font-family: var(--font-mono); font-size: .78rem;
+  letter-spacing: .1em; text-transform: uppercase;
+  text-decoration: none; transition: all .3s;
   border: 2px solid transparent;
 }
 .btn-primary {
-  background: var(--rose);
-  color: #fff;
+  background: var(--rose); color: #fff;
   box-shadow: 0 6px 24px rgba(232,133,122,.35);
 }
 .btn-primary:hover {
-  background: var(--mauve);
-  transform: translateY(-3px);
+  background: var(--mauve); transform: translateY(-3px);
   box-shadow: 0 12px 36px rgba(197,118,142,.4);
 }
-.btn-outline {
-  border-color: var(--rose);
-  color: var(--rose);
-  background: transparent;
-}
-.btn-outline:hover {
-  background: rgba(232,133,122,.08);
-  transform: translateY(-3px);
-}
+.btn-outline { border-color: var(--rose); color: var(--rose); background: transparent; }
+.btn-outline:hover { background: rgba(232,133,122,.08); transform: translateY(-3px); }
 
-/* Floating decorations */
+/* Floating stat cards */
 .hero-floats { position: absolute; right: 5%; top: 50%; transform: translateY(-50%); z-index: 2; }
 .float-card {
   background: rgba(255,255,255,.7);
@@ -251,10 +212,8 @@ nav {
   box-shadow: var(--shadow-md);
   animation: floatCard 5s ease-in-out infinite alternate;
   margin-bottom: 1rem;
-  font-family: var(--font-mono);
-  font-size: .75rem;
-  color: var(--espresso);
-  min-width: 160px;
+  font-family: var(--font-mono); font-size: .75rem;
+  color: var(--espresso); min-width: 160px;
 }
 .float-card:nth-child(2) { animation-delay: 1.5s; margin-left: 2rem; }
 .float-card:nth-child(3) { animation-delay: 3s; }
@@ -271,13 +230,9 @@ nav {
 section { padding: 6rem 5%; position: relative; z-index: 1; }
 .section-header { text-align: center; margin-bottom: 4rem; }
 .section-tag {
-  font-family: var(--font-mono);
-  font-size: .7rem;
-  letter-spacing: .2em;
-  text-transform: uppercase;
-  color: var(--mauve);
-  display: block;
-  margin-bottom: .6rem;
+  font-family: var(--font-mono); font-size: .7rem;
+  letter-spacing: .2em; text-transform: uppercase;
+  color: var(--mauve); display: block; margin-bottom: .6rem;
 }
 .section-title {
   font-family: var(--font-display);
@@ -288,14 +243,10 @@ section { padding: 6rem 5%; position: relative; z-index: 1; }
 
 /* Scroll-reveal */
 .reveal {
-  opacity: 0;
-  transform: translateY(40px);
+  opacity: 0; transform: translateY(40px);
   transition: opacity .8s ease, transform .8s ease;
 }
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
+.reveal.visible { opacity: 1; transform: translateY(0); }
 .reveal-delay-1 { transition-delay: .1s; }
 .reveal-delay-2 { transition-delay: .2s; }
 .reveal-delay-3 { transition-delay: .3s; }
@@ -304,54 +255,55 @@ section { padding: 6rem 5%; position: relative; z-index: 1; }
 /* ─── About ─────────────────────────────────────────── */
 #about { background: var(--light); }
 .about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  max-width: 1100px; margin: 0 auto;
-  align-items: start;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 3rem; max-width: 1100px; margin: 0 auto; align-items: start;
 }
+
+/* About text card — lift + left accent bar */
 .about-text-card {
   background: #fff;
   border-radius: var(--r40);
   padding: 2.8rem;
   box-shadow: var(--shadow-md);
   border: 1px solid rgba(232,133,122,.1);
-  transform-style: preserve-3d;
-  transition: transform .5s ease, box-shadow .5s ease;
+  border-left: 3px solid transparent;
+  transition: transform .4s ease, box-shadow .4s ease, border-left-color .4s ease;
 }
 .about-text-card:hover {
-  transform: rotateY(-4deg) rotateX(2deg) translateZ(10px);
+  transform: translateY(-8px);
   box-shadow: var(--shadow-lg);
+  border-left-color: var(--rose);
 }
 .about-text-card p {
-  font-size: .98rem;
-  line-height: 1.85;
-  color: var(--mid);
-  margin-bottom: 1.2rem;
+  font-size: .98rem; line-height: 1.85;
+  color: var(--mid); margin-bottom: 1.2rem;
 }
 .about-text-card p:last-child { margin-bottom: 0; }
 
 .about-info-stack { display: flex; flex-direction: column; gap: 1.2rem; }
+
+/* Info pills — slide right + left accent */
 .info-pill {
   background: #fff;
   border-radius: var(--r30);
   padding: 1.4rem 1.8rem;
   box-shadow: var(--shadow-sm);
   border: 1px solid rgba(232,133,122,.1);
+  border-left: 3px solid transparent;
   display: flex; align-items: center; gap: 1rem;
-  transform-style: preserve-3d;
-  transition: transform .4s ease, box-shadow .4s ease;
+  transition: transform .35s cubic-bezier(.34,1.56,.64,1),
+              box-shadow .35s ease,
+              border-left-color .35s ease;
 }
 .info-pill:hover {
-  transform: rotateX(-3deg) translateZ(8px);
+  transform: translateX(8px);
   box-shadow: var(--shadow-md);
+  border-left-color: var(--rose);
 }
 .pill-icon {
-  width: 44px; height: 44px;
-  border-radius: var(--r20);
+  width: 44px; height: 44px; border-radius: var(--r20);
   display: flex; align-items: center; justify-content: center;
-  font-size: 1.1rem;
-  flex-shrink: 0;
+  font-size: 1.1rem; flex-shrink: 0;
 }
 .pill-icon.pink  { background: rgba(244,205,198,.4); color: var(--rose); }
 .pill-icon.blue  { background: rgba(212,233,247,.4); color: #5b9fc9; }
@@ -361,32 +313,22 @@ section { padding: 6rem 5%; position: relative; z-index: 1; }
 .pill-text span   { font-size: .8rem; color: var(--mid); font-family: var(--font-mono); }
 
 /* ─── Skills ────────────────────────────────────────── */
-#skills {
-  background: linear-gradient(135deg, var(--latte) 0%, var(--cream) 100%);
-}
+#skills { background: linear-gradient(135deg, var(--latte) 0%, var(--cream) 100%); }
 .skills-categories {
   max-width: 1000px; margin: 0 auto;
   display: flex; flex-direction: column; gap: 2.8rem;
 }
 .skill-cat h3 {
-  font-family: var(--font-mono);
-  font-size: .72rem;
-  letter-spacing: .2em;
-  text-transform: uppercase;
-  color: var(--mauve);
-  margin-bottom: 1rem;
+  font-family: var(--font-mono); font-size: .72rem;
+  letter-spacing: .2em; text-transform: uppercase;
+  color: var(--mauve); margin-bottom: 1rem;
 }
-.skill-badges {
-  display: flex; flex-wrap: wrap; gap: .6rem;
-}
+.skill-badges { display: flex; flex-wrap: wrap; gap: .6rem; }
 .badge {
   display: inline-flex; align-items: center; gap: .4rem;
-  padding: .5rem 1.1rem;
-  border-radius: 999px;
-  font-family: var(--font-mono);
-  font-size: .72rem;
-  font-weight: 700;
-  letter-spacing: .06em;
+  padding: .5rem 1.1rem; border-radius: 999px;
+  font-family: var(--font-mono); font-size: .72rem;
+  font-weight: 700; letter-spacing: .06em;
   background: rgba(255,255,255,.75);
   border: 1.5px solid transparent;
   box-shadow: var(--shadow-sm);
@@ -408,172 +350,184 @@ section { padding: 6rem 5%; position: relative; z-index: 1; }
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 2rem;
-  max-width: 1200px; margin: 0 auto;
-  perspective: 1200px;
+  gap: 2rem; max-width: 1200px; margin: 0 auto;
 }
+
+/* ── Project Card: Overlay Reveal ── */
 .project-card {
   background: #fff;
   border-radius: var(--r30);
-  padding: 2rem;
   box-shadow: var(--shadow-sm);
   border: 1px solid rgba(232,133,122,.1);
   position: relative;
   overflow: hidden;
-  transform-style: preserve-3d;
-  transition: transform .5s cubic-bezier(.23,1,.32,1), box-shadow .5s ease;
+  transition: transform .45s cubic-bezier(.23,1,.32,1), box-shadow .45s ease;
+  cursor: pointer;
 }
 .project-card::before {
   content: '';
   position: absolute; top: 0; left: 0; right: 0; height: 4px;
   border-radius: var(--r30) var(--r30) 0 0;
   background: linear-gradient(90deg, var(--blush), var(--peach), var(--dusty));
+  z-index: 2;
 }
 .project-card:hover {
-  box-shadow: 0 24px 60px rgba(74,55,40,.18);
+  transform: translateY(-8px);
+  box-shadow: 0 28px 64px rgba(74,55,40,.18);
 }
 
-.card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; }
-.card-icon-wrap {
-  width: 48px; height: 48px;
-  border-radius: var(--r20);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.3rem;
-  flex-shrink: 0;
+/* Front content */
+.card-front {
+  padding: 2rem;
+  transition: opacity .32s ease, transform .32s ease;
 }
-.card-links { display: flex; gap: .5rem; }
-.card-link {
-  width: 34px; height: 34px;
-  border-radius: 50%;
-  background: rgba(232,133,122,.1);
-  display: flex; align-items: center; justify-content: center;
-  color: var(--rose);
-  text-decoration: none;
-  font-size: .85rem;
-  transition: all .3s;
+.project-card:hover .card-front {
+  opacity: 0;
+  transform: scale(1.04);
 }
-.card-link:hover {
-  background: var(--rose);
+
+/* Overlay */
+.card-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(145deg, rgba(232,133,122,.95) 0%, rgba(197,118,142,.92) 100%);
+  border-radius: var(--r30);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 1rem; padding: 2rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .38s ease, transform .38s ease;
+  pointer-events: none;
+  z-index: 3;
+}
+.project-card:hover .card-overlay {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.ov-icon {
+  font-size: 2.2rem;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,.15));
+}
+.ov-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem; font-weight: 700;
+  color: #fff; line-height: 1.25;
+}
+.ov-role {
+  font-family: var(--font-mono); font-size: .65rem;
+  letter-spacing: .12em; text-transform: uppercase;
+  color: rgba(255,255,255,.75);
+  background: rgba(255,255,255,.15);
+  padding: .3rem .8rem; border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.25);
+}
+.ov-tags {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: .35rem;
+  max-width: 240px;
+}
+.ov-tag {
+  font-family: var(--font-mono); font-size: .62rem;
+  padding: .22rem .6rem; border-radius: 999px;
+  background: rgba(255,255,255,.2);
   color: #fff;
+  border: 1px solid rgba(255,255,255,.35);
+  letter-spacing: .05em;
+}
+.ov-links { display: flex; gap: .8rem; margin-top: .3rem; }
+.ov-link {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: rgba(255,255,255,.2);
+  color: #fff; font-size: 1rem;
+  display: flex; align-items: center; justify-content: center;
+  text-decoration: none;
+  border: 1.5px solid rgba(255,255,255,.45);
+  transition: background .25s ease, transform .25s cubic-bezier(.34,1.56,.64,1);
+}
+.ov-link:hover {
+  background: rgba(255,255,255,.4);
   transform: scale(1.15);
 }
 
-.card-title {
-  font-family: var(--font-display);
-  font-size: 1.15rem;
-  color: var(--espresso);
-  margin-bottom: .5rem;
+/* Card internals */
+.card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; }
+.card-icon-wrap {
+  width: 48px; height: 48px; border-radius: var(--r20);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.3rem; flex-shrink: 0;
 }
-.card-role {
-  font-family: var(--font-mono);
-  font-size: .68rem;
-  color: var(--mauve);
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  margin-bottom: .9rem;
+.card-links { display: flex; gap: .5rem; }
+.card-link {
+  width: 34px; height: 34px; border-radius: 50%;
+  background: rgba(232,133,122,.1);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--rose); text-decoration: none;
+  font-size: .85rem; transition: all .3s;
 }
-.card-desc {
-  font-size: .88rem;
-  line-height: 1.7;
-  color: var(--mid);
-  margin-bottom: 1.4rem;
-}
-.card-highlights {
-  list-style: none;
-  margin-bottom: 1.4rem;
-}
-.card-highlights li {
-  font-size: .8rem;
-  color: var(--mid);
-  padding: .2rem 0;
-  display: flex; gap: .5rem; align-items: flex-start;
-}
-.card-highlights li::before {
-  content: '◆';
-  color: var(--peach);
-  font-size: .55rem;
-  margin-top: .3rem;
-  flex-shrink: 0;
-}
+.card-link:hover { background: var(--rose); color: #fff; transform: scale(1.15); }
+.card-title { font-family: var(--font-display); font-size: 1.15rem; color: var(--espresso); margin-bottom: .5rem; }
+.card-role { font-family: var(--font-mono); font-size: .68rem; color: var(--mauve); letter-spacing: .1em; text-transform: uppercase; margin-bottom: .9rem; }
+.card-desc { font-size: .88rem; line-height: 1.7; color: var(--mid); margin-bottom: 1.4rem; }
+.card-highlights { list-style: none; margin-bottom: 1.4rem; }
+.card-highlights li { font-size: .8rem; color: var(--mid); padding: .2rem 0; display: flex; gap: .5rem; align-items: flex-start; }
+.card-highlights li::before { content: '◆'; color: var(--peach); font-size: .55rem; margin-top: .3rem; flex-shrink: 0; }
 .card-tech { display: flex; flex-wrap: wrap; gap: .4rem; }
 .tech-tag {
-  font-family: var(--font-mono);
-  font-size: .64rem;
-  padding: .25rem .65rem;
-  border-radius: 999px;
-  background: rgba(244,205,198,.3);
-  color: var(--espresso);
-  border: 1px solid rgba(232,133,122,.2);
-  letter-spacing: .05em;
+  font-family: var(--font-mono); font-size: .64rem;
+  padding: .25rem .65rem; border-radius: 999px;
+  background: rgba(244,205,198,.3); color: var(--espresso);
+  border: 1px solid rgba(232,133,122,.2); letter-spacing: .05em;
 }
 
 /* ─── Experience ────────────────────────────────────── */
 #experience { background: var(--cream); }
-.timeline {
-  max-width: 780px; margin: 0 auto;
-  position: relative;
-  padding-left: 2rem;
-}
+.timeline { max-width: 780px; margin: 0 auto; position: relative; padding-left: 2rem; }
 .timeline::before {
   content: '';
-  position: absolute;
-  left: 0; top: 0; bottom: 0; width: 2px;
+  position: absolute; left: 0; top: 0; bottom: 0; width: 2px;
   background: linear-gradient(180deg, var(--blush), var(--dusty));
   border-radius: 999px;
 }
-.timeline-item {
-  position: relative;
-  margin-bottom: 3rem;
-  padding-left: 2rem;
-}
+.timeline-item { position: relative; margin-bottom: 3rem; padding-left: 2rem; }
+
+/* Timeline dot — pulse on hover */
 .timeline-dot {
-  position: absolute;
-  left: -2.5rem; top: .3rem;
-  width: 14px; height: 14px;
-  border-radius: 50%;
-  background: var(--rose);
-  border: 3px solid var(--cream);
+  position: absolute; left: -2.5rem; top: .3rem;
+  width: 14px; height: 14px; border-radius: 50%;
+  background: var(--rose); border: 3px solid var(--cream);
   box-shadow: 0 0 0 3px rgba(232,133,122,.3);
+  transition: transform .3s cubic-bezier(.34,1.56,.64,1), box-shadow .3s ease;
 }
-.timeline-date {
-  font-family: var(--font-mono);
-  font-size: .7rem;
-  color: var(--mauve);
-  letter-spacing: .1em;
-  margin-bottom: .4rem;
-  text-transform: uppercase;
+.timeline-item:hover .timeline-dot {
+  transform: scale(1.45);
+  box-shadow: 0 0 0 6px rgba(232,133,122,.15);
 }
-.timeline-title {
-  font-family: var(--font-display);
-  font-size: 1.25rem;
-  color: var(--espresso);
-  margin-bottom: .2rem;
-}
-.timeline-sub {
-  font-size: .85rem;
-  color: var(--mid);
-  margin-bottom: .9rem;
-  font-style: italic;
-}
+
+.timeline-date { font-family: var(--font-mono); font-size: .7rem; color: var(--mauve); letter-spacing: .1em; margin-bottom: .4rem; text-transform: uppercase; }
+.timeline-title { font-family: var(--font-display); font-size: 1.25rem; color: var(--espresso); margin-bottom: .2rem; }
+.timeline-sub { font-size: .85rem; color: var(--mid); margin-bottom: .9rem; font-style: italic; }
+
+/* Timeline body — slide right + left border glow */
 .timeline-body {
   background: #fff;
   border-radius: var(--r20);
   padding: 1.4rem;
   box-shadow: var(--shadow-sm);
   border: 1px solid rgba(232,133,122,.1);
+  border-left: 3px solid transparent;
+  transition: transform .35s ease, box-shadow .35s ease, border-left-color .35s ease;
 }
-.timeline-body p, .timeline-body li {
-  font-size: .87rem;
-  color: var(--mid);
-  line-height: 1.7;
+.timeline-body:hover {
+  transform: translateX(6px);
+  box-shadow: var(--shadow-md);
+  border-left-color: var(--peach);
 }
-.timeline-body ul {
-  padding-left: 1.1rem;
-  margin-top: .5rem;
-}
+.timeline-body p, .timeline-body li { font-size: .87rem; color: var(--mid); line-height: 1.7; }
+.timeline-body ul { padding-left: 1.1rem; margin-top: .5rem; }
 .timeline-body li { margin-bottom: .3rem; }
 
-/* Education card */
+/* Education card — clean lift + bottom accent */
 .edu-card {
   max-width: 780px; margin: 3rem auto 0;
   background: #fff;
@@ -581,16 +535,17 @@ section { padding: 6rem 5%; position: relative; z-index: 1; }
   padding: 2rem 2.4rem;
   box-shadow: var(--shadow-sm);
   border: 1px solid rgba(212,233,247,.6);
+  border-bottom: 3px solid transparent;
   display: flex; gap: 1.4rem; align-items: flex-start;
-  transform-style: preserve-3d;
-  transition: transform .4s ease;
+  transition: transform .4s ease, box-shadow .4s ease, border-bottom-color .4s ease;
 }
 .edu-card:hover {
-  transform: rotateX(-2deg) rotateY(2deg) translateZ(6px);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+  border-bottom-color: var(--dusty);
 }
 .edu-icon {
-  width: 56px; height: 56px;
-  border-radius: var(--r20);
+  width: 56px; height: 56px; border-radius: var(--r20);
   background: rgba(212,233,247,.4);
   display: flex; align-items: center; justify-content: center;
   font-size: 1.6rem; flex-shrink: 0;
@@ -609,18 +564,21 @@ section { padding: 6rem 5%; position: relative; z-index: 1; }
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 200px 200px;
-  gap: 1rem;
-  max-width: 1100px; margin: 0 auto;
-  perspective: 800px;
+  gap: 1rem; max-width: 1100px; margin: 0 auto;
 }
 .gallery-item {
   border-radius: var(--r20);
-  overflow: hidden;
-  position: relative;
-  transform-style: preserve-3d;
-  transition: transform .5s cubic-bezier(.23,1,.32,1);
+  overflow: hidden; position: relative;
+  transition: transform .4s cubic-bezier(.23,1,.32,1), box-shadow .4s ease;
 }
-.gallery-item:hover { transform: scale(1.03) rotateY(-3deg); }
+/* Gallery — lift + inner content zoom */
+.gallery-item:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 20px 48px rgba(74,55,40,.2);
+  z-index: 2;
+}
+.gallery-item:hover .gallery-inner { transform: scale(1.06); }
+.gallery-item:hover .gi-icon { transform: scale(1.18) translateY(-3px); }
 .gallery-item.tall  { grid-row: span 2; }
 .gallery-item.wide  { grid-column: span 2; }
 
@@ -629,11 +587,14 @@ section { padding: 6rem 5%; position: relative; z-index: 1; }
   display: flex; flex-direction: column;
   align-items: center; justify-content: center;
   padding: 1.5rem;
-  font-family: var(--font-mono);
-  font-size: .78rem;
-  text-align: center;
+  font-family: var(--font-mono); font-size: .78rem; text-align: center;
+  transition: transform .4s cubic-bezier(.23,1,.32,1);
 }
-.gallery-inner .gi-icon { font-size: 2.5rem; margin-bottom: .6rem; opacity: .8; }
+.gallery-inner .gi-icon {
+  font-size: 2.5rem; margin-bottom: .6rem; opacity: .8;
+  transition: transform .4s cubic-bezier(.34,1.56,.64,1);
+  display: block;
+}
 .gallery-inner .gi-title { font-weight: 700; margin-bottom: .3rem; }
 .gallery-inner .gi-sub   { opacity: .65; font-size: .7rem; }
 
@@ -647,9 +608,10 @@ section { padding: 6rem 5%; position: relative; z-index: 1; }
 #certifications { background: var(--light); }
 .cert-grid {
   display: flex; flex-wrap: wrap; gap: 1.2rem;
-  justify-content: center;
-  max-width: 900px; margin: 0 auto;
+  justify-content: center; max-width: 900px; margin: 0 auto;
 }
+
+/* Cert card — lift + border glow + icon wiggle */
 .cert-card {
   background: #fff;
   border-radius: var(--r30);
@@ -657,18 +619,21 @@ section { padding: 6rem 5%; position: relative; z-index: 1; }
   box-shadow: var(--shadow-sm);
   border: 1px solid rgba(232,133,122,.12);
   display: flex; align-items: center; gap: 1rem;
-  transform-style: preserve-3d;
-  transition: transform .4s ease, box-shadow .4s;
+  transition: transform .38s cubic-bezier(.34,1.56,.64,1),
+              box-shadow .38s ease,
+              border-color .38s ease;
 }
 .cert-card:hover {
-  transform: rotateX(-3deg) translateZ(10px) scale(1.02);
-  box-shadow: var(--shadow-md);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 48px rgba(232,133,122,.18);
+  border-color: rgba(232,133,122,.4);
 }
+.cert-card:hover .cert-icon { transform: rotate(-8deg) scale(1.1); }
 .cert-icon {
-  width: 48px; height: 48px;
-  border-radius: var(--r20);
+  width: 48px; height: 48px; border-radius: var(--r20);
   display: flex; align-items: center; justify-content: center;
   font-size: 1.3rem; flex-shrink: 0;
+  transition: transform .38s cubic-bezier(.34,1.56,.64,1);
 }
 .cert-text strong { display: block; font-size: .95rem; color: var(--espresso); }
 .cert-text span   { font-family: var(--font-mono); font-size: .72rem; color: var(--mauve); }
@@ -676,59 +641,38 @@ section { padding: 6rem 5%; position: relative; z-index: 1; }
 /* ─── Contact ───────────────────────────────────────── */
 #contact { background: var(--espresso); text-align: center; }
 .contact-inner { max-width: 600px; margin: 0 auto; }
-.contact-title {
-  font-family: var(--font-display);
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  color: var(--cream);
-  margin-bottom: 1rem;
-}
+.contact-title { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3.5rem); color: var(--cream); margin-bottom: 1rem; }
 .contact-title em { color: var(--peach); }
 .contact-sub { color: rgba(253,246,238,.55); font-size: .95rem; line-height: 1.7; margin-bottom: 3rem; }
-
-.contact-links {
-  display: flex; justify-content: center; gap: 1.2rem;
-  flex-wrap: wrap; margin-bottom: 3rem;
-}
+.contact-links { display: flex; justify-content: center; gap: 1.2rem; flex-wrap: wrap; margin-bottom: 3rem; }
 .contact-btn {
-  width: 62px; height: 62px;
-  border-radius: 50%;
+  width: 62px; height: 62px; border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  font-size: 1.3rem;
-  text-decoration: none;
+  font-size: 1.3rem; text-decoration: none;
   transition: all .4s cubic-bezier(.34,1.56,.64,1);
-
 }
 .contact-btn.github   { background: rgba(253,246,238,.1); color: var(--cream); border: 1.5px solid rgba(253,246,238,.2); }
 .contact-btn.linkedin { background: rgba(91,159,201,.15); color: #7ec8e3; border: 1.5px solid rgba(91,159,201,.25); }
 .contact-btn.email    { background: rgba(232,133,122,.15); color: var(--peach); border: 1.5px solid rgba(232,133,122,.25); }
 .contact-btn.phone    { background: rgba(201,219,200,.15); color: #90c98e; border: 1.5px solid rgba(201,219,200,.25); }
 .contact-btn:hover { transform: scale(1.2) translateY(-5px); filter: brightness(1.3); }
-
 .contact-email-card {
   display: inline-block;
   background: rgba(253,246,238,.07);
   border: 1px solid rgba(253,246,238,.15);
   border-radius: var(--r20);
   padding: 1rem 2rem;
-  font-family: var(--font-mono);
-  font-size: .85rem;
-  color: rgba(253,246,238,.7);
-  letter-spacing: .05em;
+  font-family: var(--font-mono); font-size: .85rem;
+  color: rgba(253,246,238,.7); letter-spacing: .05em;
 }
 
 /* ─── Footer ────────────────────────────────────────── */
 footer {
   background: var(--espresso);
   border-top: 1px solid rgba(253,246,238,.08);
-  padding: 2rem 5%;
-  text-align: center;
+  padding: 2rem 5%; text-align: center;
 }
-footer p {
-  font-family: var(--font-mono);
-  font-size: .72rem;
-  color: rgba(253,246,238,.35);
-  letter-spacing: .1em;
-}
+footer p { font-family: var(--font-mono); font-size: .72rem; color: rgba(253,246,238,.35); letter-spacing: .1em; }
 footer span { color: var(--peach); }
 
 /* ─── Responsive ────────────────────────────────────── */
@@ -739,9 +683,11 @@ footer span { color: var(--peach); }
   .gallery-item.tall, .gallery-item.wide { grid-row: auto; grid-column: auto; }
 }
 @media (max-width: 640px) {
-  .nav-links { display: none; flex-direction: column; gap: 1.4rem;
+  .nav-links {
+    display: none; flex-direction: column; gap: 1.4rem;
     position: fixed; inset: 0; top: 60px; background: var(--cream);
-    padding: 3rem 5%; z-index: 99; }
+    padding: 3rem 5%; z-index: 99;
+  }
   .nav-links.open { display: flex; }
   .nav-toggle { display: block; }
   .projects-grid { grid-template-columns: 1fr; }
@@ -752,7 +698,6 @@ footer span { color: var(--peach); }
 </style>
 </head>
 <body>
-
 
 <!-- Nav -->
 <nav id="nav">
@@ -777,11 +722,9 @@ footer span { color: var(--peach); }
     <div class="blob blob-3"></div>
     <div class="blob blob-4"></div>
   </div>
-
   <div class="hero-content">
     <div class="hero-tag">✦ Available for Work ✦</div>
     <h1 class="hero-name">Bui Thi<br><span>Quynh Nhu</span></h1>
-
     <div class="role-wrapper">
       <div class="role-track" id="roleTrack">
         <div class="role-item">Data Engineering</div>
@@ -789,15 +732,12 @@ footer span { color: var(--peach); }
         <div class="role-item">Business Analytics</div>
         <div class="role-item">Computer Vision</div>
         <div class="role-item">Full-Stack Development</div>
-        <!-- clone for infinite loop -->
         <div class="role-item">Data Engineering</div>
       </div>
     </div>
-
     <p class="hero-bio">
       CS undergraduate at Ton Duc Thang University with 7 end-to-end projects spanning deep learning, cloud infrastructure, real-time computer vision, and full-stack engineering.
     </p>
-
     <div class="hero-cta">
       <a href="./Bui_Thi_Quynh_Nhu_Resume.pdf" download class="btn btn-primary">
         <i class="fa-solid fa-download"></i> Download CV
@@ -807,8 +747,6 @@ footer span { color: var(--peach); }
       </a>
     </div>
   </div>
-
-  <!-- Floating stat cards -->
   <div class="hero-floats">
     <div class="float-card">
       <div class="fc-icon">🚀</div>
@@ -834,20 +772,12 @@ footer span { color: var(--peach); }
     <span class="section-tag">✦ who i am ✦</span>
     <h2 class="section-title">A little <em>about me</em></h2>
   </div>
-
   <div class="about-grid">
     <div class="about-text-card reveal">
-      <p>
-        I'm a Computer Science undergraduate at Ton Duc Thang University, passionate about bridging the gap between intelligent algorithms and production-ready systems.
-      </p>
-      <p>
-        I've built and deployed CNN, LSTM, and YOLO models, architected containerised multi-service cloud systems, and optimised data pipelines end-to-end. My work spans deep learning research to full-stack web engineering.
-      </p>
-      <p>
-        I'm seeking a <strong>Data Engineering or AI Engineering internship</strong> where I can drive analytical and predictive solutions at scale, turning raw data into real impact.
-      </p>
+      <p>I'm a Computer Science undergraduate at Ton Duc Thang University, passionate about bridging the gap between intelligent algorithms and production-ready systems.</p>
+      <p>I've built and deployed CNN, LSTM, and YOLO models, architected containerised multi-service cloud systems, and optimised data pipelines end-to-end. My work spans deep learning research to full-stack web engineering.</p>
+      <p>I'm seeking a <strong>Data Engineering or AI Engineering internship</strong> where I can drive analytical and predictive solutions at scale, turning raw data into real impact.</p>
     </div>
-
     <div class="about-info-stack">
       <div class="info-pill reveal reveal-delay-1">
         <div class="pill-icon pink"><i class="fa-solid fa-location-dot"></i></div>
@@ -887,7 +817,6 @@ footer span { color: var(--peach); }
     <span class="section-tag">✦ toolkit ✦</span>
     <h2 class="section-title">Skills &amp; <em>Technologies</em></h2>
   </div>
-
   <div class="skills-categories">
     <div class="skill-cat reveal">
       <h3>Languages &amp; Query</h3>
@@ -903,7 +832,6 @@ footer span { color: var(--peach); }
         <span class="badge latte">PHP</span>
       </div>
     </div>
-
     <div class="skill-cat reveal reveal-delay-1">
       <h3>ML / AI</h3>
       <div class="skill-badges">
@@ -918,7 +846,6 @@ footer span { color: var(--peach); }
         <span class="badge mauve">Model Evaluation</span>
       </div>
     </div>
-
     <div class="skill-cat reveal reveal-delay-2">
       <h3>Data &amp; Cloud</h3>
       <div class="skill-badges">
@@ -933,7 +860,6 @@ footer span { color: var(--peach); }
         <span class="badge blue">Postman</span>
       </div>
     </div>
-
     <div class="skill-cat reveal reveal-delay-3">
       <h3>Web &amp; Tools</h3>
       <div class="skill-badges">
@@ -956,158 +882,231 @@ footer span { color: var(--peach); }
     <span class="section-tag">✦ work ✦</span>
     <h2 class="section-title">Featured <em>Projects</em></h2>
   </div>
-
   <div class="projects-grid">
 
     <!-- VQA -->
-    <div class="project-card reveal" data-tilt>
-      <div class="card-header">
-        <div class="card-icon-wrap" style="background:rgba(244,205,198,.3)">🧠</div>
-        <div class="card-links">
-          <a href="https://github.com/emmybui/VQA-model" class="card-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
-          <a href="#" class="card-link" title="Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    <div class="project-card reveal">
+      <div class="card-front">
+        <div class="card-header">
+          <div class="card-icon-wrap" style="background:rgba(244,205,198,.3)">🧠</div>
+          <div class="card-links">
+            <a href="https://github.com/emmybui/VQA-model" class="card-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="#" class="card-link" title="Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+        <div class="card-title">Visual Question Answering System</div>
+        <div class="card-role">Algorithm Designer · Feb–Mar 2026</div>
+        <div class="card-desc">3-component VQA architecture combining visual feature extraction, bidirectional question encoding, and answer generation via LSTM decoder achieving multi-class prediction.</div>
+        <ul class="card-highlights">
+          <li>Pretrained ResNet50 ImageNet weights reduced training time by ~40%</li>
+          <li>5-configuration ablation study comparing BiLSTM vs LSTM encoders</li>
+          <li>Full benchmark comparison documented with attention fusion strategies</li>
+        </ul>
+        <div class="card-tech">
+          <span class="tech-tag">PyTorch</span><span class="tech-tag">ResNet50</span>
+          <span class="tech-tag">BiLSTM</span><span class="tech-tag">LSTM</span><span class="tech-tag">Python</span>
         </div>
       </div>
-      <div class="card-title">Visual Question Answering System</div>
-      <div class="card-role">Algorithm Designer · Feb–Mar 2026</div>
-      <div class="card-desc">3-component VQA architecture combining visual feature extraction, bidirectional question encoding, and answer generation via LSTM decoder achieving multi-class prediction.</div>
-      <ul class="card-highlights">
-        <li>Pretrained ResNet50 ImageNet weights reduced training time by ~40%</li>
-        <li>5-configuration ablation study comparing BiLSTM vs LSTM encoders</li>
-        <li>Full benchmark comparison documented with attention fusion strategies</li>
-      </ul>
-      <div class="card-tech">
-        <span class="tech-tag">PyTorch</span>
-        <span class="tech-tag">ResNet50</span>
-        <span class="tech-tag">BiLSTM</span>
-        <span class="tech-tag">LSTM</span>
-        <span class="tech-tag">Python</span>
+      <div class="card-overlay">
+        <div class="ov-icon">🧠</div>
+        <div class="ov-title">Visual Question Answering System</div>
+        <div class="ov-role">Algorithm Designer · Feb–Mar 2026</div>
+        <div class="ov-tags">
+          <span class="ov-tag">PyTorch</span><span class="ov-tag">ResNet50</span>
+          <span class="ov-tag">BiLSTM</span><span class="ov-tag">LSTM</span><span class="ov-tag">Python</span>
+        </div>
+        <div class="ov-links">
+          <a href="https://github.com/emmybui/VQA-model" class="ov-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="#" class="ov-link" title="Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
       </div>
     </div>
 
     <!-- Fruit -->
-    <div class="project-card reveal reveal-delay-1" data-tilt>
-      <div class="card-header">
-        <div class="card-icon-wrap" style="background:rgba(201,219,200,.3)">🍎</div>
-        <div class="card-links">
-          <a href="#" class="card-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
-          <a href="#" class="card-link" title="Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    <div class="project-card reveal reveal-delay-1">
+      <div class="card-front">
+        <div class="card-header">
+          <div class="card-icon-wrap" style="background:rgba(201,219,200,.3)">🍎</div>
+          <div class="card-links">
+            <a href="#" class="card-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="#" class="card-link" title="Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+        <div class="card-title">Fruit Quality &amp; Ripeness Recognition</div>
+        <div class="card-role">Algorithm Designer &amp; Researcher · Nov 2024-Feb 2025</div>
+        <div class="card-desc">CNN-based classification pipeline detecting ripeness across 4 quality grades. Reached university competition finals — placing in the top 15% of submissions.</div>
+        <ul class="card-highlights">
+          <li>Custom augmentation pipeline improved out-of-sample generalisation by ~20%</li>
+          <li>Reduced false-positive misclassification rate by 18%</li>
+          <li>Class-weighted loss functions with iterative hyperparameter tuning</li>
+        </ul>
+        <div class="card-tech">
+          <span class="tech-tag">CNN</span><span class="tech-tag">TensorFlow</span>
+          <span class="tech-tag">OpenCV</span><span class="tech-tag">Python</span><span class="tech-tag">Data Aug.</span>
         </div>
       </div>
-      <div class="card-title">Fruit Quality &amp; Ripeness Recognition</div>
-      <div class="card-role">Algorithm Designer &amp; Researcher · Nov 2024-Feb 2025</div>
-      <div class="card-desc">CNN-based classification pipeline detecting ripeness across 4 quality grades. Reached university competition finals — placing in the top 15% of submissions.</div>
-      <ul class="card-highlights">
-        <li>Custom augmentation pipeline improved out-of-sample generalisation by ~20%</li>
-        <li>Reduced false-positive misclassification rate by 18%</li>
-        <li>Class-weighted loss functions with iterative hyperparameter tuning</li>
-      </ul>
-      <div class="card-tech">
-        <span class="tech-tag">CNN</span>
-        <span class="tech-tag">TensorFlow</span>
-        <span class="tech-tag">OpenCV</span>
-        <span class="tech-tag">Python</span>
-        <span class="tech-tag">Data Aug.</span>
+      <div class="card-overlay">
+        <div class="ov-icon">🍎</div>
+        <div class="ov-title">Fruit Quality &amp; Ripeness Recognition</div>
+        <div class="ov-role">Algorithm Designer · Nov 2024–Feb 2025</div>
+        <div class="ov-tags">
+          <span class="ov-tag">CNN</span><span class="ov-tag">TensorFlow</span>
+          <span class="ov-tag">OpenCV</span><span class="ov-tag">Python</span>
+        </div>
+        <div class="ov-links">
+          <a href="#" class="ov-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="#" class="ov-link" title="Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
       </div>
     </div>
 
     <!-- Minicloud -->
-    <div class="project-card reveal reveal-delay-2" data-tilt>
-      <div class="card-header">
-        <div class="card-icon-wrap" style="background:rgba(212,233,247,.3)">☁️</div>
-        <div class="card-links">
-          <a href="#" class="card-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
-          <a href="https://drive.google.com/file/d/16lcTXT4sYDJHfTnmigh5LEIEhvDosOOD/view?usp=sharing" class="card-link" title="Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    <div class="project-card reveal reveal-delay-2">
+      <div class="card-front">
+        <div class="card-header">
+          <div class="card-icon-wrap" style="background:rgba(212,233,247,.3)">☁️</div>
+          <div class="card-links">
+            <a href="#" class="card-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://drive.google.com/file/d/16lcTXT4sYDJHfTnmigh5LEIEhvDosOOD/view?usp=sharing" class="card-link" title="Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+        <div class="card-title">Minicloud — Cloud Infrastructure Simulator</div>
+        <div class="card-role">Full-Stack &amp; Cloud Architect · Oct–Nov 2025</div>
+        <div class="card-desc">9-service containerised cloud system replicating AWS compute, storage, and identity management with real-time health dashboards and RBAC controls.</div>
+        <ul class="card-highlights">
+          <li>Zero packet-loss across 100+ simulated concurrent connections</li>
+          <li>RBAC identity controls reducing incident response to under 2 minutes</li>
+          <li>Nginx intranet routing layer for internal service orchestration</li>
+        </ul>
+        <div class="card-tech">
+          <span class="tech-tag">Docker</span><span class="tech-tag">Nginx</span>
+          <span class="tech-tag">AWS</span><span class="tech-tag">Linux</span><span class="tech-tag">RBAC</span>
         </div>
       </div>
-      <div class="card-title">Minicloud — Cloud Infrastructure Simulator</div>
-      <div class="card-role">Full-Stack &amp; Cloud Architect · Oct–Nov 2025</div>
-      <div class="card-desc">9-service containerised cloud system replicating AWS compute, storage, and identity management with real-time health dashboards and RBAC controls.</div>
-      <ul class="card-highlights">
-        <li>Zero packet-loss across 100+ simulated concurrent connections</li>
-        <li>RBAC identity controls reducing incident response to under 2 minutes</li>
-        <li>Nginx intranet routing layer for internal service orchestration</li>
-      </ul>
-      <div class="card-tech">
-        <span class="tech-tag">Docker</span>
-        <span class="tech-tag">Nginx</span>
-        <span class="tech-tag">AWS</span>
-        <span class="tech-tag">Linux</span>
-        <span class="tech-tag">RBAC</span>
+      <div class="card-overlay">
+        <div class="ov-icon">☁️</div>
+        <div class="ov-title">Minicloud — Cloud Infrastructure Simulator</div>
+        <div class="ov-role">Full-Stack &amp; Cloud Architect · Oct–Nov 2025</div>
+        <div class="ov-tags">
+          <span class="ov-tag">Docker</span><span class="ov-tag">Nginx</span>
+          <span class="ov-tag">AWS</span><span class="ov-tag">Linux</span><span class="ov-tag">RBAC</span>
+        </div>
+        <div class="ov-links">
+          <a href="#" class="ov-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://drive.google.com/file/d/16lcTXT4sYDJHfTnmigh5LEIEhvDosOOD/view?usp=sharing" class="ov-link" title="Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
       </div>
     </div>
 
     <!-- Traffic Sign -->
-    <div class="project-card reveal reveal-delay-3" data-tilt>
-      <div class="card-header">
-        <div class="card-icon-wrap" style="background:rgba(244,205,198,.3)">🚦</div>
-        <div class="card-links">
-          <a href="https://github.com/emmybui/image-processing" class="card-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
-          <a href="https://drive.google.com/drive/folders/17uaHZTLdOmgXFYCz802t-19bzccbU6PD?usp=sharing" class="card-link" title="Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    <div class="project-card reveal reveal-delay-3">
+      <div class="card-front">
+        <div class="card-header">
+          <div class="card-icon-wrap" style="background:rgba(244,205,198,.3)">🚦</div>
+          <div class="card-links">
+            <a href="https://github.com/emmybui/image-processing" class="card-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://drive.google.com/drive/folders/17uaHZTLdOmgXFYCz802t-19bzccbU6PD?usp=sharing" class="card-link" title="Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+        <div class="card-title">Traffic Sign Recognition System</div>
+        <div class="card-role">Image Processing Lead · Oct–Nov 2025</div>
+        <div class="card-desc">Real-time video inference pipeline achieving 91%+ classification accuracy across 4 sign categories at 24 fps with object tracking across frames.</div>
+        <ul class="card-highlights">
+          <li>6 colour + 4 geometric features extracted per frame</li>
+          <li>Reduced false detections by 25% via confidence threshold calibration</li>
+          <li>Precision-recall curve analysis for per-class optimisation</li>
+        </ul>
+        <div class="card-tech">
+          <span class="tech-tag">YOLO</span><span class="tech-tag">OpenCV</span>
+          <span class="tech-tag">Python</span><span class="tech-tag">Real-time CV</span>
         </div>
       </div>
-      <div class="card-title">Traffic Sign Recognition System</div>
-      <div class="card-role">Image Processing Lead · Oct–Nov 2025</div>
-      <div class="card-desc">Real-time video inference pipeline achieving 91%+ classification accuracy across 4 sign categories at 24 fps with object tracking across frames.</div>
-      <ul class="card-highlights">
-        <li>6 colour + 4 geometric features extracted per frame</li>
-        <li>Reduced false detections by 25% via confidence threshold calibration</li>
-        <li>Precision-recall curve analysis for per-class optimisation</li>
-      </ul>
-      <div class="card-tech">
-        <span class="tech-tag">YOLO</span>
-        <span class="tech-tag">OpenCV</span>
-        <span class="tech-tag">Python</span>
-        <span class="tech-tag">Real-time CV</span>
+      <div class="card-overlay">
+        <div class="ov-icon">🚦</div>
+        <div class="ov-title">Traffic Sign Recognition System</div>
+        <div class="ov-role">Image Processing Lead · Oct–Nov 2025</div>
+        <div class="ov-tags">
+          <span class="ov-tag">YOLO</span><span class="ov-tag">OpenCV</span>
+          <span class="ov-tag">Python</span><span class="ov-tag">Real-time CV</span>
+        </div>
+        <div class="ov-links">
+          <a href="https://github.com/emmybui/image-processing" class="ov-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://drive.google.com/drive/folders/17uaHZTLdOmgXFYCz802t-19bzccbU6PD?usp=sharing" class="ov-link" title="Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
       </div>
     </div>
 
     <!-- E-Commerce -->
-    <div class="project-card reveal reveal-delay-1" data-tilt>
-      <div class="card-header">
-        <div class="card-icon-wrap" style="background:rgba(197,118,142,.15)">🛒</div>
-        <div class="card-links">
-          <a href="https://github.com/weamon17/E-Commerce-Store_SE" class="card-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
-          <a href="#" class="card-link" title="Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    <div class="project-card reveal reveal-delay-1">
+      <div class="card-front">
+        <div class="card-header">
+          <div class="card-icon-wrap" style="background:rgba(197,118,142,.15)">🛒</div>
+          <div class="card-links">
+            <a href="https://github.com/weamon17/E-Commerce-Store_SE" class="card-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="#" class="card-link" title="Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+        <div class="card-title">Computer Shop E-Commerce Platform</div>
+        <div class="card-role">Full-Stack Engineer · Aug-Sep 2025</div>
+        <div class="card-desc">Full-stack e-commerce platform supporting 500+ SKUs with dynamic filtering, multi-category management, and end-to-end order processing.</div>
+        <ul class="card-highlights">
+          <li>SQL query execution optimised by 35% through index design</li>
+          <li>Paginated REST APIs + caching layer cut page load 1.8s → 0.7s</li>
+        </ul>
+        <div class="card-tech">
+          <span class="tech-tag">Node.js</span><span class="tech-tag">SQL</span>
+          <span class="tech-tag">REST API</span><span class="tech-tag">JavaScript</span><span class="tech-tag">PHP</span>
         </div>
       </div>
-      <div class="card-title">Computer Shop E-Commerce Platform</div>
-      <div class="card-role">Full-Stack Engineer · Aug-Sep 2025</div>
-      <div class="card-desc">Full-stack e-commerce platform supporting 500+ SKUs with dynamic filtering, multi-category management, and end-to-end order processing.</div>
-      <ul class="card-highlights">
-        <li>SQL query execution optimised by 35% through index design</li>
-        <li>Paginated REST APIs + caching layer cut page load 1.8s → 0.7s</li>
-      </ul>
-      <div class="card-tech">
-        <span class="tech-tag">Node.js</span>
-        <span class="tech-tag">SQL</span>
-        <span class="tech-tag">REST API</span>
-        <span class="tech-tag">JavaScript</span>
-        <span class="tech-tag">PHP</span>
+      <div class="card-overlay">
+        <div class="ov-icon">🛒</div>
+        <div class="ov-title">Computer Shop E-Commerce Platform</div>
+        <div class="ov-role">Full-Stack Engineer · Aug–Sep 2025</div>
+        <div class="ov-tags">
+          <span class="ov-tag">Node.js</span><span class="ov-tag">SQL</span>
+          <span class="ov-tag">REST API</span><span class="ov-tag">JavaScript</span><span class="ov-tag">PHP</span>
+        </div>
+        <div class="ov-links">
+          <a href="https://github.com/weamon17/E-Commerce-Store_SE" class="ov-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="#" class="ov-link" title="Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
       </div>
     </div>
 
     <!-- Notes App -->
-    <div class="project-card reveal reveal-delay-2" data-tilt>
-      <div class="card-header">
-        <div class="card-icon-wrap" style="background:rgba(201,219,200,.3)">📝</div>
-        <div class="card-links">
-          <a href="https://github.com/emmybui/Note-taking-website" class="card-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
-          <a href="#" class="card-link" title="Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    <div class="project-card reveal reveal-delay-2">
+      <div class="card-front">
+        <div class="card-header">
+          <div class="card-icon-wrap" style="background:rgba(201,219,200,.3)">📝</div>
+          <div class="card-links">
+            <a href="https://github.com/emmybui/Note-taking-website" class="card-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="#" class="card-link" title="Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+        <div class="card-title">Real-Time Note-Taking Web App</div>
+        <div class="card-role">Full-Stack Engineer · Apr–May 2025</div>
+        <div class="card-desc">Cloud-hosted real-time note-taking application with 99.5% uptime over a 3-week live testing period, supporting concurrent read/write operations without data conflicts.</div>
+        <ul class="card-highlights">
+          <li>RESTful API backend with optimistic locking for concurrency safety</li>
+          <li>99.5% uptime over 3-week live production test</li>
+        </ul>
+        <div class="card-tech">
+          <span class="tech-tag">Node.js</span><span class="tech-tag">REST API</span>
+          <span class="tech-tag">Cloud Deploy</span><span class="tech-tag">SQL</span>
         </div>
       </div>
-      <div class="card-title">Real-Time Note-Taking Web App</div>
-      <div class="card-role">Full-Stack Engineer · Apr–May 2025</div>
-      <div class="card-desc">Cloud-hosted real-time note-taking application with 99.5% uptime over a 3-week live testing period, supporting concurrent read/write operations without data conflicts.</div>
-      <ul class="card-highlights">
-        <li>RESTful API backend with optimistic locking for concurrency safety</li>
-        <li>99.5% uptime over 3-week live production test</li>
-      </ul>
-      <div class="card-tech">
-        <span class="tech-tag">Node.js</span>
-        <span class="tech-tag">REST API</span>
-        <span class="tech-tag">Cloud Deploy</span>
-        <span class="tech-tag">SQL</span>
+      <div class="card-overlay">
+        <div class="ov-icon">📝</div>
+        <div class="ov-title">Real-Time Note-Taking Web App</div>
+        <div class="ov-role">Full-Stack Engineer · Apr–May 2025</div>
+        <div class="ov-tags">
+          <span class="ov-tag">Node.js</span><span class="ov-tag">REST API</span>
+          <span class="ov-tag">Cloud Deploy</span><span class="ov-tag">SQL</span>
+        </div>
+        <div class="ov-links">
+          <a href="https://github.com/emmybui/Note-taking-website" class="ov-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="#" class="ov-link" title="Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
       </div>
     </div>
 
@@ -1120,7 +1119,6 @@ footer span { color: var(--peach); }
     <span class="section-tag">✦ journey ✦</span>
     <h2 class="section-title">Experience &amp; <em>Education</em></h2>
   </div>
-
   <div class="timeline">
     <div class="timeline-item reveal">
       <div class="timeline-dot"></div>
@@ -1135,7 +1133,6 @@ footer span { color: var(--peach); }
         </ul>
       </div>
     </div>
-
     <div class="timeline-item reveal reveal-delay-1">
       <div class="timeline-dot"></div>
       <div class="timeline-date">2023 – 2025</div>
@@ -1146,8 +1143,6 @@ footer span { color: var(--peach); }
       </div>
     </div>
   </div>
-
-  <!-- Education -->
   <div class="edu-card reveal">
     <div class="edu-icon">🎓</div>
     <div class="edu-info">
@@ -1172,7 +1167,6 @@ footer span { color: var(--peach); }
     <span class="section-tag">✦ highlights ✦</span>
     <h2 class="section-title">At a <em>Glance</em></h2>
   </div>
-
   <div class="gallery-grid">
     <div class="gallery-item tall g1 reveal">
       <div class="gallery-inner">
@@ -1251,7 +1245,6 @@ footer span { color: var(--peach); }
     <p class="contact-sub">
       I'm actively looking for Data Engineering and AI Engineering internship opportunities. Whether you have a question or just want to say hi, my inbox is always open!
     </p>
-
     <div class="contact-links">
       <a href="https://github.com/emmybui" target="_blank" class="contact-btn github" title="GitHub">
         <i class="fa-brands fa-github"></i>
@@ -1266,7 +1259,6 @@ footer span { color: var(--peach); }
         <i class="fa-solid fa-phone"></i>
       </a>
     </div>
-
     <div class="contact-email-card">buiquynhnhu.work@gmail.com</div>
   </div>
 </section>
@@ -1278,7 +1270,6 @@ footer span { color: var(--peach); }
 
 <!-- ─── JAVASCRIPT ──────────────────────────────────── -->
 <script>
-
 /* Mobile Nav */
 const toggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');
@@ -1288,7 +1279,7 @@ navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => na
 /* Role Flipper */
 const track = document.getElementById('roleTrack');
 const items = track.querySelectorAll('.role-item');
-const total = items.length - 1; // last is clone
+const total = items.length - 1;
 let idx = 0;
 function flipRole() {
   idx++;
@@ -1316,23 +1307,6 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 reveals.forEach(el => observer.observe(el));
 
-/* 3D Card Tilt */
-document.querySelectorAll('[data-tilt]').forEach(card => {
-  card.addEventListener('mousemove', e => {
-    const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    const cx = rect.width / 2;
-    const cy = rect.height / 2;
-    const rx2 = ((y - cy) / cy) * -10;
-    const ry2 = ((x - cx) / cx) * 10;
-    card.style.transform = `perspective(800px) rotateX(${rx2}deg) rotateY(${ry2}deg) translateZ(16px)`;
-  });
-  card.addEventListener('mouseleave', () => {
-    card.style.transform = 'perspective(800px) rotateX(0) rotateY(0) translateZ(0)';
-  });
-});
-
 /* Parallax Blobs */
 document.addEventListener('scroll', () => {
   const y = window.scrollY;
@@ -1344,7 +1318,7 @@ document.addEventListener('scroll', () => {
 
 /* Nav scroll state */
 window.addEventListener('scroll', () => {
-  document.getElementById('nav').style.boxShadow = 
+  document.getElementById('nav').style.boxShadow =
     window.scrollY > 30 ? '0 4px 24px rgba(74,55,40,.1)' : 'none';
 });
 </script>
