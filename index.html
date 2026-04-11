@@ -110,6 +110,12 @@ nav {
   transition: transform .25s ease, color .25s ease, opacity .25s ease;
   display: inline-block;
 }
+
+.nav-logo:hover {
+  color: var(--rose);
+  transform: translateY(-2px);
+}
+
 .nav-links {
   display: flex; gap: 2rem; list-style: none;
 }
@@ -131,7 +137,7 @@ nav {
   background: var(--rose);
   transition: width .3s;
 }
-.nav-links a:hover { color: var(--rose); transform: translateY(-2px); }
+.nav-links a:hover { color: var(--rose); }
 .nav-links a:hover::after { width: 100%; }
 .nav-toggle { display: none; background: none; border: none; cursor: none; }
 .nav-toggle span {
@@ -257,68 +263,6 @@ nav {
   background: rgba(232,133,122,.08);
   transform: translateY(-3px);
 }
-  .btn-download {
-  position: relative;
-  overflow: hidden;
-  min-width: 190px;
-  justify-content: center;
-}
-
-.btn-download::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -120%;
-  width: 120%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255,255,255,.28),
-    transparent
-  );
-  transition: left .6s ease;
-}
-.btn-download {
-  position: relative;
-  min-width: 220px;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.btn-download .btn-text,
-.btn-download .btn-loading {
-  display: inline-flex;
-  align-items: center;
-  gap: .5rem;
-  transition: opacity .25s ease, transform .25s ease;
-}
-
-.btn-download .btn-loading {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transform: translateY(8px);
-  pointer-events: none;
-}
-
-.btn-download.loading {
-  pointer-events: none;
-}
-
-.btn-download.loading .btn-text {
-  opacity: 0;
-  transform: translateY(-8px);
-}
-
-.btn-download.loading .btn-loading {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 
 /* Floating decorations */
 .hero-floats { position: absolute; right: 5%; top: 50%; transform: translateY(-50%); z-index: 2; }
@@ -822,46 +766,15 @@ footer span { color: var(--peach); }
   .gallery-item.tall, .gallery-item.wide { grid-row: auto; grid-column: auto; }
 }
 @media (max-width: 640px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    gap: 1.4rem;
-    position: fixed;
-    top: 72px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(253,246,238,.98);
-    backdrop-filter: blur(14px);
-    padding: 2rem 5% 3rem;
-    z-index: 99;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .nav-links.open {
-    display: flex;
-  }
-
-  .nav-toggle {
-    display: block;
-  }
-
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .gallery-grid {
-    grid-template-columns: 1fr;
-  }
-
-  section {
-    padding: 4rem 5%;
-  }
-
-  .hero-name {
-    font-size: 2.6rem;
-  }
+  .nav-links { display: none; flex-direction: column; gap: 1.4rem;
+    position: fixed; inset: 0; top: 60px; background: var(--cream);
+    padding: 3rem 5%; z-index: 99; }
+  .nav-links.open { display: flex; }
+  .nav-toggle { display: block; }
+  .projects-grid { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: 1fr; }
+  section { padding: 4rem 5%; }
+  .hero-name { font-size: 2.6rem; }
 }
 </style>
 </head>
@@ -873,7 +786,7 @@ footer span { color: var(--peach); }
 
 <!-- Nav -->
 <nav id="nav">
-  <a href="#hero" class="nav-logo">✦  Quynh Nhu ✦</a>
+  <<a href="#hero" class="nav-logo">✦ Quynh Nhu ✦</a>
   <ul class="nav-links" id="navLinks">
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
@@ -885,9 +798,7 @@ footer span { color: var(--peach); }
     <span></span><span></span><span></span>
   </button>
 </nav>
-body.menu-open {
-  overflow: hidden;
-}
+
 <!-- ─── HERO ─────────────────────────────────────── -->
 <section id="hero">
   <div class="hero-bg-blobs">
@@ -918,24 +829,9 @@ body.menu-open {
     </p>
 
     <div class="hero-cta">
-      <!-- <a href="./Bui_Thi_Quynh_Nhu_Resume.pdf" download class="btn btn-primarybtn-download" id="downloadBtn">
-        <span class="btn-text">
-            <i class="fa-solid fa-download"></i> Download CV
-          </span>
-        
-          <span class="btn-loading">
-            <i class="fa-solid fa-spinner fa-spin"></i> Downloading...
-          </span>
-      </a> -->
-      <a href="/Bui_Thi_Quynh_Nhu_Resume.pdf" class="btn btn-primary btn-download" id="downloadBtn">
-        <span class="btn-text">
-          <i class="fa-solid fa-download"></i> Download CV
-        </span>
-        <span class="btn-loading">
-          <i class="fa-solid fa-spinner fa-spin"></i> Downloading...
-        </span>
+      <a href="./Bui_Thi_Quynh_Nhu_Resume.pdf" download class="btn btn-primary">
+        <i class="fa-solid fa-download"></i> Download CV
       </a>
-      
       <a href="#contact" class="btn btn-outline">
         <i class="fa-solid fa-paper-plane"></i> Get in Touch
       </a>
@@ -1510,32 +1406,6 @@ window.addEventListener('scroll', () => {
   document.getElementById('nav').style.boxShadow = 
     window.scrollY > 30 ? '0 4px 24px rgba(74,55,40,.1)' : 'none';
 });
-  
-const downloadBtn = document.getElementById('downloadBtn');
-
-if (downloadBtn) {
-  downloadBtn.addEventListener('click', () => {
-    downloadBtn.classList.add('loading');
-
-    setTimeout(() => {
-      downloadBtn.classList.remove('loading');
-    }, 2500);
-  });
-}
-const toggle = document.getElementById('navToggle');
-const navLinks = document.getElementById('navLinks');
-
-toggle.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
-  document.body.classList.toggle('menu-open');
-});
-
-navLinks.querySelectorAll('a').forEach(a =>
-  a.addEventListener('click', () => {
-    navLinks.classList.remove('open');
-    document.body.classList.remove('menu-open');
-  })
-);
 </script>
 </body>
 </html>
